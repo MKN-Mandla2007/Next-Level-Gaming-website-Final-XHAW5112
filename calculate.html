@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="description" content="Calculate your custom gaming package fees and discounts.">
+  <title>Calculate Fees | Next Level Gaming &amp; Esports Arena</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Added a small style for validation errors */
+    .input-error {
+      border: 2px solid #ff4d4d !important;
+      background-color: #fff5f5 !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="brand-text-container">
+        <p class="brand-title">NEXT LEVEL GAMING &amp; ESPORTS ARENA</p>
+      </div>
+      <a href="index.html" class="logo-link" aria-label="Next Level Gaming home">
+        <img class="nlg-logo" src="img/NLG logo.png" alt="Next Level Gaming &amp; Esports Arena logo">
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a class="nav-item nav-home" href="index.html">Home</a>
+        <a class="nav-item nav-packages" href="products.html">Packages</a>
+        <a class="nav-item nav-calc active" href="calculate.html">Calculate Fees</a>
+        <a class="nav-item nav-about" href="about.html">About</a>
+        <a class="nav-item nav-contact" href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="calc-main">
+      
+      <header class="contact-header">
+        <h1 class="contact-title accent-blue">Calculate Fees &amp; Package Builder</h1>
+        <p class="contact-subtitle">Based on previously booked packages and experiences, your total is calculated here. Discounts will apply where applicable. (VAT already included in initial pricing)</p>
+      </header>
+
+      <div class="calc-grid">
+        
+        <!-- LEFT PANEL: CONTACT INFO -->
+        <section class="panel contact-panel">
+          <h2 class="panel-heading accent-blue">Contact Information</h2>
+          <p class="panel-desc">Please enter your details to initialize the fee calculation process.</p>
+          
+          <form class="calc-form" id="feeForm">
+            <div class="form-group">
+              <label for="calcName" class="accent-blue">Full Name</label>
+              <input type="text" id="calcName" class="form-input" placeholder="e.g. John Doe">
+            </div>
+            <div class="form-group">
+              <label for="calcPhone" class="accent-blue">Phone Number</label>
+              <input type="tel" id="calcPhone" class="form-input" placeholder="e.g. +27 82 123 4567">
+            </div>
+            <div class="form-group">
+              <label for="calcEmail" class="accent-blue">Email Address</label>
+              <input type="email" id="calcEmail" class="form-input" placeholder="e.g. john@example.com">
+            </div>
+            <div class="form-group">
+              <label for="calcLocation" class="accent-blue">Venue Location</label>
+              <select id="calcLocation" class="form-input select-input">
+                <option value="" disabled selected>Select Preferred Location</option>
+                <option value="fourways">Fourways Mall</option>
+              </select>
+            </div>
+          </form>
+        </section>
+
+        <!-- RIGHT PANEL: SELECTION -->
+        <section class="panel selection-panel">
+          <h2 class="panel-heading accent-purple">Package &amp; Experience Selection</h2>
+          <p class="panel-desc">Select one or multiple options below to build your customized package.</p>
+          
+          <div class="selection-group">
+            <h3 class="selection-tier accent-blue">R1,500 Packages</h3>
+            <label class="checkbox-row">
+              <input type="checkbox" class="pkg-checkbox" data-name="VIP Gaming Experience" data-price="1500" checked>
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">VIP Gaming Experience</span>
+              <span class="checkbox-price">R1,500</span>
+            </label>
+            <label class="checkbox-row">
+              <input type="checkbox" class="pkg-checkbox" data-name="Ultimate Gamer Pass" data-price="1500">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">Ultimate Gamer Pass</span>
+              <span class="checkbox-price">R1,500</span>
+            </label>
+            <label class="checkbox-row">
+              <input type="checkbox" class="pkg-checkbox" data-name="Esports Training Package" data-price="1500">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">Esports Training Package</span>
+              <span class="checkbox-price">R1,500</span>
+            </label>
+          </div>
+
+          <div class="selection-group">
+            <h3 class="selection-tier accent-blue">R750 Experiences</h3>
+            <label class="checkbox-row">
+              <input type="checkbox" class="pkg-checkbox" data-name="Escape Room Challenge" data-price="750" checked>
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">Escape Room Challenge</span>
+              <span class="checkbox-price">R750</span>
+            </label>
+            <label class="checkbox-row">
+              <input type="checkbox" class="pkg-checkbox" data-name="Virtual Reality Experience" data-price="750" checked>
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">Virtual Reality Experience</span>
+              <span class="checkbox-price">R750</span>
+            </label>
+            <label class="checkbox-row">
+              <input type="checkbox" class="pkg-checkbox" data-name="Racing Simulator Challenge" data-price="750">
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">Racing Simulator Challenge</span>
+              <span class="checkbox-price">R750</span>
+            </label>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- BOTTOM PANEL: SUMMARY -->
+      <section class="panel summary-panel">
+        <h2 class="panel-heading accent-blue">Quote Calculation Summary</h2>
+        
+        <div class="summary-content">
+          
+          <div class="summary-section">
+            <h4 class="summary-title">SELECTED ITEMS</h4>
+            <ul id="selected-items-list" class="selected-list">
+              <!-- Injected via JS -->
+            </ul>
+          </div>
+
+          <hr class="summary-divider">
+
+          <div class="discount-header-row">
+            <div class="discount-info">
+              <h4 class="summary-title accent-blue" id="discount-title-text">Multi-Booking Discount Applied (0 Bookings)</h4>
+              <p class="panel-desc">Book multiple packages or experiences to qualify for tiered discounts.</p>
+            </div>
+            <div class="discount-badges">
+              <span class="badge badge-inactive" id="badge-2">2 Bookings: 5%</span>
+              <span class="badge badge-inactive" id="badge-3">3 Bookings: 10%</span>
+              <span class="badge badge-inactive" id="badge-4">4+ Bookings: 15%</span>
+            </div>
+          </div>
+
+          <hr class="summary-divider">
+
+          <div class="totals-section">
+            <div class="total-row">
+              <span>Subtotal</span>
+              <span id="calc-subtotal">R0.00</span>
+            </div>
+            <div class="total-row">
+              <span id="calc-discount-label">Multi-Booking Discount (0%)</span>
+              <span id="calc-discount">-R0.00</span>
+            </div>
+            <div class="total-row">
+              <span>VAT (15% included)</span>
+              <span id="calc-vat">R0.00</span>
+            </div>
+            <div class="total-row grand-total-row">
+              <span class="accent-blue">Grand Total</span>
+              <span class="accent-blue" id="calc-grand-total">R0.00</span>
+            </div>
+          </div>
+
+          <div class="summary-actions">
+            <button id="btn-calculate" class="btn btn-primary" type="button">Calculate Total</button>
+            <button id="btn-request" class="btn btn-secondary" type="button">Request Consultant</button>
+          </div>
+          
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <section class="footer-venue" aria-label="Venue information">
+          <p class="footer-brand">Next Level Gaming &amp; Esports Arena</p>
+          <address class="footer-address">11 Ruby Close, Witkoppen, Sandton</address>
+        </section>
+
+        <nav class="footer-resources" aria-label="Resources">
+          <h2 class="footer-heading">Resources</h2>
+          <div class="resource-links">
+            <a class="footer-link" href="#">Privacy Policy</a>
+            <a class="footer-link" href="#">Terms</a>
+            <a class="footer-link" href="#">FAQ</a>
+          </div>
+        </nav>
+
+        <section class="footer-social" aria-label="Social media">
+          <h2 class="footer-heading right-align">Social Media</h2>
+          <div class="social-icons">
+            <a class="social-btn youtube" href="#" aria-label="YouTube"></a>
+            <a class="social-btn facebook" href="#" aria-label="Facebook"></a>
+            <a class="social-btn instagram" href="#" aria-label="Instagram"></a>
+            <a class="social-btn x-twitter" href="#" aria-label="X"></a>
+          </div>
+        </section>
+      </div>
+      
+      <img class="footer-divider" src="img/line.svg" alt="" aria-hidden="true">
+      
+      <div class="copyright-container">
+        <p class="copyright-text">
+          © 2026 Next Level Gaming &amp; Esports Arena. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const checkboxes = document.querySelectorAll('.pkg-checkbox');
+      const calculateBtn = document.getElementById('btn-calculate');
+      const requestBtn = document.getElementById('btn-request');
+      
+      const itemsList = document.getElementById('selected-items-list');
+      const subtotalEl = document.getElementById('calc-subtotal');
+      const discountLabelEl = document.getElementById('calc-discount-label');
+      const discountEl = document.getElementById('calc-discount');
+      const vatEl = document.getElementById('calc-vat');
+      const grandTotalEl = document.getElementById('calc-grand-total');
+      const discountTitleText = document.getElementById('discount-title-text');
+      
+      const badge2 = document.getElementById('badge-2');
+      const badge3 = document.getElementById('badge-3');
+      const badge4 = document.getElementById('badge-4');
+
+      // Form Input Elements for Validation
+      const inputName = document.getElementById('calcName');
+      const inputPhone = document.getElementById('calcPhone');
+      const inputEmail = document.getElementById('calcEmail');
+      const inputLoc = document.getElementById('calcLocation');
+
+      function formatZAR(amount) {
+        return 'R' + amount.toLocaleString('en-ZA', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      }
+
+      // --- NEW: Error Handling / Validation Logic ---
+      function validateForm() {
+        let isValid = true;
+        const errors = [];
+
+        // Reset styles
+        [inputName, inputPhone, inputEmail, inputLoc].forEach(el => el.classList.remove('input-error'));
+
+        if (inputName.value.trim() === "") {
+          inputName.classList.add('input-error');
+          errors.push("Please enter your Full Name.");
+          isValid = false;
+        }
+
+        // Basic Phone Regex: Checks for at least 10 digits
+        const phoneRegex = /^\+?[\d\s-]{10,}$/;
+        if (!phoneRegex.test(inputPhone.value.trim())) {
+          inputPhone.classList.add('input-error');
+          errors.push("Please enter a valid Phone Number.");
+          isValid = false;
+        }
+
+        // Basic Email Regex. These took me so long to figure out but the error handling is in place!
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(inputEmail.value.trim())) {
+          inputEmail.classList.add('input-error');
+          errors.push("Please enter a valid Email Address.");
+          isValid = false;
+        }
+
+        if (inputLoc.value === "") {
+          inputLoc.classList.add('input-error');
+          errors.push("Please select a Venue Location.");
+          isValid = false;
+        }
+
+        if (!isValid) {
+          alert("Validation Error:\n\n" + errors.join("\n"));
+        }
+
+        return isValid;
+      }
+
+      function updateCalculation() {
+        // Only update if the user gives basic contact info
+        if (!validateForm()) return;
+
+        let selectedItems = [];
+        let rawSubtotal = 0;
+
+        checkboxes.forEach(box => {
+          if (box.checked) {
+            const name = box.getAttribute('data-name');
+            const price = parseFloat(box.getAttribute('data-price'));
+            selectedItems.push({ name, price });
+            rawSubtotal += price;
+          }
+        });
+
+        itemsList.innerHTML = '';
+        selectedItems.forEach(item => {
+          const li = document.createElement('li');
+          li.className = 'selected-item-row';
+          li.innerHTML = `<span>${item.name}</span><span>${formatZAR(item.price)}</span>`;
+          itemsList.appendChild(li);
+        });
+
+        const count = selectedItems.length;
+        let discountRate = 0;
+        
+        badge2.className = 'badge badge-inactive';
+        badge3.className = 'badge badge-inactive';
+        badge4.className = 'badge badge-inactive';
+
+        if (count === 2) {
+          discountRate = 0.05;
+          badge2.className = 'badge badge-active';
+        } else if (count === 3) {
+          discountRate = 0.10;
+          badge3.className = 'badge badge-active';
+        } else if (count >= 4) {
+          discountRate = 0.15;
+          badge4.className = 'badge badge-active';
+        }
+
+        discountTitleText.textContent = `Multi-Booking Discount Applied (${count} Bookings)`;
+        discountLabelEl.textContent = `Multi-Booking Discount (${(discountRate * 100)}%)`;
+
+        const discountAmount = rawSubtotal * discountRate;
+        const grandTotal = rawSubtotal - discountAmount;
+        const vatAmount = grandTotal - (grandTotal / 1.15);
+
+        subtotalEl.textContent = formatZAR(rawSubtotal);
+        discountEl.textContent = '-' + formatZAR(discountAmount);
+        vatEl.textContent = formatZAR(vatAmount);
+        grandTotalEl.textContent = formatZAR(grandTotal);
+      }
+
+      // Calculate Total Button
+      calculateBtn.addEventListener('click', updateCalculation);
+
+      // Request Consultant Button
+      requestBtn.addEventListener('click', () => {
+        if (validateForm()) {
+          alert(`Thank you, ${inputName.value}! A consultant will contact you at ${inputEmail.value} shortly to finalize your booking.`);
+        }
+      });
+
+      // Initialize (if checkboxes are pre-checked, user must still fill form to see totals)
+      updateCalculation();
+    });
+  </script>
+</body>
+</html>
