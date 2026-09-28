@@ -6,11 +6,35 @@
   <meta name="description" content="Virtual Reality Experience at Next Level Gaming &amp; Esports Arena">
   <title>VR Experience | Next Level Gaming</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .package-layout {
+      display: flex;
+      gap: 30px;
+      padding: 40px;
+      align-items: center;
+    }
+    .media-column {
+      width: 50%;
+    }
+    .package-image {
+      width: 100%;
+      height: 450px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px;
+      border: 5px solid #7209B7;
+    }
+    .content-column {
+      width: 50%;
+    }
+    @media (max-width: 768px) {
+      .package-layout { flex-direction: column; }
+      .media-column, .content-column { width: 100%; }
+    }
+  </style>
 </head>
 <body>
   <div class="esports-page">
-    
-    <!-- HEADER -->
     <header class="site-header">
       <div class="brand-text-container">
         <p class="brand-title">NEXT LEVEL GAMING &amp; ESPORTS ARENA</p>
@@ -27,7 +51,6 @@
       </nav>
     </header>
 
-    <!-- BREADCRUMBS -->
     <nav class="breadcrumb-nav" aria-label="Breadcrumb">
       <a class="crumb-link" href="index.html">Home</a>
       <span class="crumb-separator" aria-hidden="true">&gt;</span>
@@ -36,9 +59,7 @@
       <span class="crumb-current" aria-current="page">VR Experience</span>
     </nav>
 
-    <!-- MAIN CONTENT -->
     <main class="package-layout">
-      
       <section class="media-column" aria-label="VR Experience image">
         <div class="package-image" role="img" aria-label="Person using a VR headset" style="background-image: url('img/Vr_exp.jpg');"></div>
       </section>
@@ -46,7 +67,6 @@
       <section class="content-column" aria-labelledby="package-title">
         <header class="package-header">
           <h1 class="package-title gradient-text" id="package-title">VR Experience</h1>
-          <!-- AZERNION -->
           <div class="price-display" aria-label="Price: R750 per person">
             <span class="price-amount">R750</span>
             <span class="price-unit">/ person</span>
@@ -56,7 +76,6 @@
         <article class="package-details" aria-labelledby="purpose-title">
           <h2 class="section-subtitle" id="purpose-title">Purpose</h2>
           <p class="purpose-description">Immersive virtual reality gaming experience.</p>
-          
           <h3 class="features-title">Includes</h3>
           <ul class="features-list">
             <li>VR headset &amp; controllers</li>
@@ -64,25 +83,18 @@
             <li>Staff assistance</li>
           </ul>
         </article>
-
         <a href="calculate.html" class="cta-button" style="text-decoration: none; display: inline-block; text-align: center;">
           <span class="cta-text">Add to Booking</span>
         </a>
       </section>
-      
     </main>
 
-    <section class="policies-section" aria-label="Policies"></section>
-
-    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="footer-grid">
-        
         <section class="footer-venue" aria-label="Venue information">
           <p class="footer-brand">Next Level Gaming &amp; Esports Arena</p>
           <address class="footer-address">11 Ruby Close, Witkoppen, Sandton</address>
         </section>
-
         <nav class="footer-resources" aria-label="Resources">
           <h2 class="footer-heading">Resources</h2>
           <div class="resource-links">
@@ -91,7 +103,6 @@
             <a class="footer-link" href="#">FAQ</a>
           </div>
         </nav>
-
         <section class="footer-social" aria-label="Social media">
           <h2 class="footer-heading right-align">Social Media</h2>
           <div class="social-icons">
@@ -101,18 +112,12 @@
             <a class="social-btn x-twitter" href="#" aria-label="X"></a>
           </div>
         </section>
-        
       </div>
-      
       <img class="footer-divider" src="img/line.svg" alt="" aria-hidden="true">
-      
       <div class="copyright-container">
-        <p class="copyright-text">
-          © 2026 Next Level Gaming &amp; Esports Arena. All rights reserved.
-        </p>
+        <p class="copyright-text">&copy; 2026 Next Level Gaming &amp; Esports Arena. All rights reserved.</p>
       </div>
     </footer>
-
   </div>
 </body>
 </html>
