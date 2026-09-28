@@ -1,112 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
-  <meta name="description" content="Contact Next Level Gaming &amp; Esports Arena for any questions or assistance.">
-  <title>Contact Us | Next Level Gaming &amp; Esports Arena</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Contact Us | Next Level Gaming</title>
 </head>
-<body>
-  <div class="page-wrapper">
-    
-    <!-- HEADER -->
-    <header class="site-header">
-      <div class="brand-text-container">
-        <p class="brand-title">NEXT LEVEL GAMING &amp; ESPORTS ARENA</p>
-      </div>
-      <a href="index.html" class="logo-link" aria-label="Next Level Gaming home">
-        <img class="nlg-logo" src="img/NLG logo.png" alt="Next Level Gaming &amp; Esports Arena logo">
-      </a>
-      <nav class="primary-nav" aria-label="Primary navigation">
-        <a class="nav-item nav-home" href="index.html">Home</a>
-        <a class="nav-item nav-packages" href="products.html">Packages</a>
-        <a class="nav-item nav-calc" href="calculate.html">Calculate Fees</a>
-        <a class="nav-item nav-about" href="about.html">About</a>
-        <a class="nav-item nav-contact active" href="contact.html">Contact</a>
-      </nav>
-    </header>
+<body bgcolor="#0b0b0b" text="white" link="#4CC9F0" vlink="#4CC9F0">
 
-    <!-- MAIN CONTENT -->
-    <main class="contact-main">
-      
-      <header class="contact-header">
-        <h1 class="contact-title gradient-text">Contact Us</h1>
-        <p class="contact-subtitle">Have any questions or require any assistance? Let us know or visit us!</p>
-      </header>
+  <!-- HEADER TABLE -->
+  <table width="100%" bgcolor="#000000" cellpadding="20" cellspacing="0" border="0">
+    <tr>
+      <td width="30%" align="left">
+        <font color="#F72585" face="sans-serif"><b>NEXT LEVEL GAMING & ESPORTS ARENA</b></font>
+      </td>
+      <td width="20%" align="center">
+        <img src="img/NLG logo.png" alt="Logo" width="80">
+      </td>
+      <td width="30%" align="right">
+        <font face="sans-serif" size="2">
+          <a href="index.html">Home</a> &nbsp;
+          <a href="products.html">Packages</a> &nbsp;
+          <a href="calculate.html">Calculate</a> &nbsp;
+          <a href="about.html">About</a> &nbsp;
+          <a href="contact.html">Contact</a>
+        </font>
+      </td>
+    </tr>
+  </table>
 
-      <section class="contact-grid">
-        
-        <!-- LEFT COLUMN: FORM & INFO -->
-        <div class="contact-info-column">
-          <h2 class="info-heading">Contact Information</h2>
-          <p class="info-description">Simply enter your name. Clicking our email will automatically allow you to email us.</p>
-          
-          <form class="contact-form" action="#" method="POST">
-            
-            <div class="form-group">
-              <label for="fullName" class="accent-blue">Enter Your Full Name</label>
-              <input type="text" id="fullName" name="fullName" class="form-input" placeholder="e.g. John Doe">
-            </div>
+  <center>
+    <br>
+    <font face="sans-serif" color="#4CC9F0" size="6"><b>Contact Us</b></font><br>
+    <font face="sans-serif" size="2">Have any questions? Let us know or visit us!</font>
+    <br><br>
 
-            <div class="form-group">
-              <label class="accent-blue">Our Phone Number</label>
-              <input type="text" class="form-input readonly-input" value="+27 075 883 4272" readonly aria-label="Phone Number">
-            </div>
+    <!-- CONTACT TABLE -->
+    <table width="80%" cellpadding="20" cellspacing="0" border="0">
+      <tr>
+        <!-- Left: Form -->
+        <td bgcolor="#111111" width="50%" align="left" style="border: 2px solid #7209B7; border-radius: 15px;">
+          <font face="sans-serif" color="#4361EE" size="4"><b>Contact Information</b></font><br><br>
+          <font face="sans-serif" size="2">
+            Enter Your Full Name:<br>
+            <input type="text" style="width: 90%; background: #222; color: white; border: 1px solid #444;"><br><br>
+            Our Phone Number:<br>
+            <input type="text" value="+27 075 883 4272" readonly style="width: 90%; background: #222; color: white; border: 1px solid #444;"><br><br>
+            Email Address:<br>
+            <a href="mailto:NLG&EP-Arena@gmail.com">NLG&EP-Arena@gmail.com</a>
+          </font>
+        </td>
+        <td width="5%"></td> <!-- Spacer -->
+        <!-- Right: Map -->
+        <td width="45%" align="center">
+          <img src="img/Fourways_mall.png" width="100%" style="border: 2px solid #4361EE; border-radius: 15px;" alt="Map">
+        </td>
+      </tr>
+    </table>
+  </center>
 
-            <div class="form-group">
-              <label class="accent-blue">Email Address</label>
-              <a href="mailto:NLG&EP-Arena@gmail.com" class="form-input link-input">NLG&EP-Arena@gmail.com</a>
-            </div>
-
-          </form>
-        </div>
-
-        <!-- RIGHT COLUMN: MAP -->
-        <figure class="contact-map-column">
-          <img src="img/Fourways_mall.png" alt="Map showing our location at Fourways Mall" class="map-image" loading="lazy">
-        </figure>
-
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="footer-grid">
-        <section class="footer-venue" aria-labelledby="footer-brand-heading">
-          <h2 class="footer-brand" id="footer-brand-heading">Next Level Gaming &amp; Esports Arena</h2>
-          <address class="footer-address">11 Ruby Close, Witkoppen, Sandton</address>
-        </section>
-
-        <nav class="footer-resources" aria-labelledby="resources-heading">
-          <h2 class="footer-heading" id="resources-heading">Resources</h2>
-          <div class="resource-links">
-            <a class="footer-link" href="#">Privacy Policy</a>
-            <a class="footer-link" href="#">Terms</a>
-            <a class="footer-link" href="#">FAQ</a>
-          </div>
-        </nav>
-
-        <section class="footer-social" aria-labelledby="social-heading">
-          <h2 class="footer-heading right-align" id="social-heading">Social Media</h2>
-          <div class="social-icons">
-            <a class="social-btn youtube" href="#" aria-label="YouTube"></a>
-            <a class="social-btn facebook" href="#" aria-label="Facebook"></a>
-            <a class="social-btn instagram" href="#" aria-label="Instagram"></a>
-            <a class="social-btn x-twitter" href="#" aria-label="X"></a>
-          </div>
-        </section>
-      </div>
-      
-      <img class="footer-divider" src="img/line.svg" alt="" aria-hidden="true">
-      
-      <div class="copyright-container">
-        <p class="copyright-text">
-          © 2026 Next Level Gaming &amp; Esports Arena. All rights reserved.
-        </p>
-      </div>
-    </footer>
-
-  </div>
+  <!-- FOOTER TABLE -->
+  <table width="100%" bgcolor="#000000" cellpadding="30" cellspacing="0" border="0">
+    <tr>
+      <td align="center">
+        <font face="sans-serif" color="#888" size="2">
+          Next Level Gaming & Esports Arena | 11 Ruby Close, Sandton<br>
+          <a href="#">Privacy Policy</a> | <a href="#">Terms</a> | <a href="#">FAQ</a><br>
+          &copy; 2026 Next Level Gaming
+        </font>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>

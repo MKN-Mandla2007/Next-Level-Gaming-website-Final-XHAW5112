@@ -1,123 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta charset="utf-8">
-  <meta name="description" content="Esports training package at Next Level Gaming &amp; Esports Arena">
-  <title>Esports Training Package | Next Level Gaming</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .package-layout {
-      display: flex;
-      gap: 30px;
-      padding: 40px;
-      align-items: center;
-    }
-    .media-column {
-      width: 50%;
-    }
-    .package-image {
-      width: 100%;
-      height: 450px;
-      background-size: cover;
-      background-position: center;
-      border-radius: 20px;
-      border: 5px solid #7209B7;
-    }
-    .content-column {
-      width: 50%;
-    }
-    @media (max-width: 768px) {
-      .package-layout { flex-direction: column; }
-      .media-column, .content-column { width: 100%; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Escape Room | Next Level Gaming</title>
 </head>
-<body>
-  <div class="esports-page">
-    <header class="site-header">
-      <div class="brand-text-container">
-        <p class="brand-title">NEXT LEVEL GAMING &amp; ESPORTS ARENA</p>
-      </div>
-      <a href="index.html" class="logo-link" aria-label="Next Level Gaming home">
-        <img class="nlg-logo" src="img/NLG logo.png" alt="Next Level Gaming &amp; Esports Arena logo">
-      </a>
-      <nav class="primary-nav" aria-label="Primary navigation">
-        <a class="nav-item nav-home" href="index.html">Home</a>
-        <a class="nav-item nav-packages" href="products.html">Packages</a>
-        <a class="nav-item nav-calc" href="calculate.html">Calculate Fees</a>
-        <a class="nav-item nav-about" href="about.html">About</a>
-        <a class="nav-item nav-contact" href="contact.html">Contact</a>
-      </nav>
-    </header>
+<body bgcolor="#0b0b0b" text="white" link="#4CC9F0" vlink="#4CC9F0">
 
-    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-      <a class="crumb-link" href="index.html">Home</a>
-      <span class="crumb-separator" aria-hidden="true">&gt;</span>
-      <a class="crumb-link" href="products.html">Experiences</a>
-      <span class="crumb-separator" aria-hidden="true">&gt;</span>
-      <span class="crumb-current" aria-current="page">Esports training</span>
-    </nav>
+  <!-- HEADER TABLE -->
+  <table width="100%" bgcolor="#000000" cellpadding="20" cellspacing="0" border="0">
+    <tr>
+      <td width="30%" align="left">
+        <font color="#F72585" face="sans-serif"><b>NEXT LEVEL GAMING & ESPORTS ARENA</b></font>
+      </td>
+      <td width="20%" align="center">
+        <img src="img/NLG logo.png" alt="Logo" width="80">
+      </td>
+      <td width="30%" align="right">
+        <font face="sans-serif" size="2">
+          <a href="index.html">Home</a> &nbsp;
+          <a href="products.html">Packages</a> &nbsp;
+          <a href="calculate.html">Calculate</a> &nbsp;
+          <a href="about.html">About</a> &nbsp;
+          <a href="contact.html">Contact</a>
+        </font>
+      </td>
+    </tr>
+  </table>
 
-    <main class="package-layout">
-      <section class="media-column" aria-label="Esports training image">
-        <div class="package-image" role="img" aria-label="Gamer participating in an esports training session" style="background-image: url('img/Esports_Gaming.jpg');"></div>
-      </section>
+  <!-- BREADCRUMBS -->
+  <center>
+    <font face="sans-serif" size="2">
+      <a href="index.html">Home</a> &gt; <a href="products.html">Experiences</a> &gt; Esports Training Package
+    </font>
+  </center>
 
-      <section class="content-column" aria-labelledby="package-title">
-        <header class="package-header">
-          <h1 class="package-title gradient-text" id="package-title">Esports Training Package</h1>
-          <div class="price-display" aria-label="Price: R1,500 per person">
-            <span class="price-amount">R1,500</span>
-            <span class="price-unit">/ person</span>
-          </div>
-        </header>
-
-        <article class="package-details" aria-labelledby="purpose-title">
-          <h2 class="section-subtitle" id="purpose-title">Purpose</h2>
-          <p class="purpose-description">Improve competitive gaming skills with professional coaching.</p>
-          <h3 class="features-title">Includes</h3>
-          <ul class="features-list">
-            <li>Strategy coaching &amp; Team communication</li>
+  <!-- MAIN LAYOUT TABLE -->
+  <table width="90%" align="center" cellpadding="20" cellspacing="0" border="0">
+    <tr>
+      <!-- Left: Image -->
+      <td width="50%" align="center" valign="top">
+        <img src="img/Esports_Gaming.jpg" width="500" style="border: 5px solid #7209B7; border-radius: 15px;">
+      </td>
+      <!-- Right: Content -->
+      <td width="50%" align="left" valign="top">
+        <font face="sans-serif" color="#F72585" size="6"><b>Esports Training Package</b></font><br>
+        <font face="sans-serif" size="4"><b>R1,500 / person</b></font><br><br>
+        
+        <font face="sans-serif" color="#4CC9F0" size="4"><b>Purpose</b></font><br>
+        <font face="sans-serif" size="3">Improve competitive gaming skills with professional coaching.</font><br><br>
+        
+        <font face="sans-serif" color="#4CC9F0" size="4"><b>Includes</b></font><br>
+        <font face="sans-serif" size="3">
+          <ul>
+            <li>Strategy coaching & Team communication</li>
             <li>Match analysis</li>
-            <li>Practice sessions &amp; Performance feedback</li>
+            <li>Practice sessions & Performance feedback</li>
           </ul>
-        </article>
-        <a href="calculate.html" class="cta-button" style="text-decoration: none; display: inline-block; text-align: center;">
-          <span class="cta-text">Add to Booking</span>
-        </a>
-      </section>
-    </main>
+        </font>
+        <br>
+        <a href="calculate.html"><font face="sans-serif" size="3"><b>[ ADD TO BOOKING ]</b></font></a>
+      </td>
+    </tr>
+  </table>
 
-    <footer class="site-footer">
-      <div class="footer-grid">
-        <section class="footer-venue" aria-label="Venue information">
-          <p class="footer-brand">Next Level Gaming &amp; Esports Arena</p>
-          <address class="footer-address">11 Ruby Close, Witkoppen, Sandton</address>
-        </section>
-        <nav class="footer-resources" aria-label="Resources">
-          <h2 class="footer-heading">Resources</h2>
-          <div class="resource-links">
-            <a class="footer-link" href="#">Privacy Policy</a>
-            <a class="footer-link" href="#">Terms</a>
-            <a class="footer-link" href="#">FAQ</a>
-          </div>
-        </nav>
-        <section class="footer-social" aria-label="Social media">
-          <h2 class="footer-heading right-align">Social Media</h2>
-          <div class="social-icons">
-            <a class="social-btn youtube" href="#" aria-label="YouTube"></a>
-            <a class="social-btn facebook" href="#" aria-label="Facebook"></a>
-            <a class="social-btn instagram" href="#" aria-label="Instagram"></a>
-            <a class="social-btn x-twitter" href="#" aria-label="X"></a>
-          </div>
-        </section>
-      </div>
-      <img class="footer-divider" src="img/line.svg" alt="" aria-hidden="true">
-      <div class="copyright-container">
-        <p class="copyright-text">&copy; 2026 Next Level Gaming &amp; Esports Arena. All rights reserved.</p>
-      </div>
-    </footer>
-  </div>
+  <!-- FOOTER TABLE -->
+  <table width="100%" bgcolor="#000000" cellpadding="30" cellspacing="0" border="0">
+    <tr>
+      <td align="center">
+        <font face="sans-serif" color="#888" size="2">
+          Next Level Gaming & Esports Arena | 11 Ruby Close, Sandton<br>
+          <a href="#">Privacy Policy</a> | <a href="#">Terms</a> | <a href="#">FAQ</a><br>
+          &copy; 2026 Next Level Gaming
+        </font>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>

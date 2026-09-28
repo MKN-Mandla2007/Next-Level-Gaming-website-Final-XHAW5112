@@ -2,106 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Next Level Gaming & Esports Arena</title>
-  
-  <!-- Google Fonts Import -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
-  
-  <!-- External CSS -->
-  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<!-- bgcolor sets the background color, text sets the default font color -->
+<body bgcolor="#0b0b0b" text="white" link="#4CC9F0" vlink="#4CC9F0">
 
-  <header class="site-header">
-    <div class="brand-text-container">
-      <p class="brand-title gradient-text">NEXT LEVEL GAMING &amp; ESPORTS ARENA</p>
-    </div>
-    <a href="index.html" class="logo-link" aria-label="Next Level Gaming home">
-      <img class="nlg-logo" src="img/NLG logo.png" alt="Next Level Gaming &amp; Esports Arena logo">
-    </a>
-    <nav class="primary-nav" aria-label="Primary navigation">
-      <a class="nav-item nav-home active" href="index.html">Home</a>
-      <a class="nav-item nav-packages" href="products.html">Packages</a>
-      <a class="nav-item nav-calc" href="calculate.html">Calculate Fees</a>
-      <a class="nav-item nav-about" href="about.html">About</a>
-      <a class="nav-item nav-contact" href="contact.html">Contact</a>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero" aria-label="Hero Image for Next Level Gaming">
-
-  </section>
-
-  <main class="services-section">
-    
-    <article class="card">
-      <img src="img/Esports_Gaming.jpg" alt="Esports player at setup">
-      <div class="card-content">
-        <h3 class="card-title">Esports Training Package</h3>
-        <p class="card-desc">Improve competitive gaming skills with professional coaching.</p>
-        <a href="products.html" class="card-link">Learn More &gt;</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="img/Vr_booth.jpg" alt="Woman using VR headset">
-      <div class="card-content">
-        <h3 class="card-title">Virtual Reality Experience</h3>
-        <p class="card-desc">Explore immersive virtual reality games.</p>
-        <a href="products.html" class="card-link">Learn More &gt;</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <img src="img/birthday_package.jpg" alt="People celebrating a birthday party">
-      <div class="card-content">
-        <h3 class="card-title">Birthday Party Package</h3>
-        <p class="card-desc">Host a birthday celebration with access to fun party games such as Mario Kart.</p>
-        <a href="products.html" class="card-link">Learn More &gt;</a>
-      </div>
-    </article>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-grid">
-      <section class="footer-venue">
-        <h2 class="footer-brand">Next Level Gaming &amp; Esports Arena</h2>
-        <address class="footer-address">11 Ruby Close, Witkoppen, Sandton</address>
-      </section>
+  <!-- HEADER TABLE: Used to push the brand left, logo center, and nav right -->
+  <table width="100%" bgcolor="#000000" cellpadding="20" cellspacing="0" border="0">
+    <tr>
+      <!-- Brand Name -->
+      <td width="30%" align="left">
+        <font color="#F72585" face="sans-serif"><b>NEXT LEVEL GAMING & ESPORTS ARENA</b></font>
+      </td>
       
-      <nav class="footer-resources">
-        <h2 class="footer-heading">Resources</h2>
-        <div class="resource-links">
-          <a class="footer-link" href="#">Privacy Policy</a>
-          <a class="footer-link" href="#">Terms</a>
-          <a class="footer-link" href="#">FAQ</a>
-        </div>
-      </nav>
+      <!-- Logo Center -->
+      <td width="20%" align="center">
+        <img src="img/NLG logo.png" alt="Logo" width="80">
+      </td>
       
-      <section class="footer-social">
-        <h2 class="footer-heading right-align">Social Media</h2>
-        <div class="social-icons">
-          <a class="social-btn youtube" href="#" aria-label="YouTube"></a>
-          <a class="social-btn facebook" href="#" aria-label="Facebook"></a>
-          <a class="social-btn instagram" href="#" aria-label="Instagram"></a>
-          <a class="social-btn x-twitter" href="#" aria-label="X"></a>
-        </div>
-      </section>
-    </div>
-    
-    <img class="footer-divider" src="img/line.svg" alt="" aria-hidden="true">
-    
-    <div class="copyright-container">
-      <p class="copyright-text">
-        &copy; 2026 Next Level Gaming &amp; Esports Arena. All rights reserved.
-      </p>
-    </div>
-  </footer>
+      <!-- Navigation -->
+      <td width="30%" align="right">
+        <font face="sans-serif" size="2">
+          <a href="index.html">Home</a> &nbsp;
+          <a href="products.html">Packages</a> &nbsp;
+          <a href="calculate.html">Calculate</a> &nbsp;
+          <a href="about.html">About</a> &nbsp;
+          <a href="contact.html">Contact</a>
+        </font>
+      </td>
+    </tr>
+  </table>
+
+  <!-- HERO IMAGE: Just a big image stretching across the screen -->
+  <img src="img/Hero_shot.jpg" width="100%" height="450" alt="Hero Image">
+
+  <!-- MAIN CONTENT -->
+  <center>
+    <br>
+    <font face="sans-serif" color="#4CC9F0" size="6"><b>Our Featured Experiences</b></font>
+    <br><br>
+
+    <!-- PACKAGES TABLE: Using a table to create the "Card" look -->
+    <table width="80%" cellpadding="20" cellspacing="10" border="0">
+      <tr>
+        <!-- Package 1 -->
+        <td bgcolor="#151515" align="center" width="33%" style="border-radius: 15px;">
+          <img src="img/Esports_Gaming.jpg" width="280" height="180" alt="Esports"><br>
+          <font face="sans-serif" color="#F72585" size="4"><b>Esports Training</b></font><br>
+          <font face="sans-serif" color="#ccc" size="2">
+            Improve your competitive gaming skills with professional coaching.
+          </font><br><br>
+          <a href="products.html"><font face="sans-serif" size="2"><b>LEARN MORE &gt;</b></font></a>
+        </td>
+
+        <!-- Package 2 -->
+        <td bgcolor="#151515" align="center" width="33%" style="border-radius: 15px;">
+          <img src="img/Vr_booth.jpg" width="280" height="180" alt="VR"><br>
+          <font face="sans-serif" color="#F72585" size="4"><b>VR Experience</b></font><br>
+          <font face="sans-serif" color="#ccc" size="2">
+            Step into another world with our high-end VR headsets.
+          </font><br><br>
+          <a href="products.html"><font face="sans-serif" size="2"><b>LEARN MORE &gt;</b></font></a>
+        </td>
+
+        <!-- Package 3 -->
+        <td bgcolor="#151515" align="center" width="33%" style="border-radius: 15px;">
+          <img src="img/birthday_package.jpg" width="280" height="180" alt="Birthday"><br>
+          <font face="sans-serif" color="#F72585" size="4"><b>Birthday Package</b></font><br>
+          <font face="sans-serif" color="#ccc" size="2">
+            The ultimate celebration for gamers. Reserved areas and catering.
+          </font><br><br>
+          <a href="products.html"><font face="sans-serif" size="2"><b>LEARN MORE &gt;</b></font></a>
+        </td>
+      </tr>
+    </table>
+  </center>
+
+  <!-- FOOTER -->
+  <table width="100%" bgcolor="#000000" cellpadding="30" cellspacing="0" border="0">
+    <tr>
+      <td align="center">
+        <font face="sans-serif" color="#888" size="2">
+          Next Level Gaming & Esports Arena | 11 Ruby Close, Sandton<br>
+          <a href="#">Privacy Policy</a> | <a href="#">Terms</a> | <a href="#">FAQ</a><br>
+          &copy; 2026 Next Level Gaming
+        </font>
+      </td>
+    </tr>
+  </table>
 
 </body>
 </html>
